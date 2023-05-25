@@ -67,3 +67,7 @@ p {
     display: block;
     margin: auto;
 }
+
+.large-screens {
+    display: none;
+}
