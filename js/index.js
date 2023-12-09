@@ -1,12 +1,8 @@
-const body = document.querySelector('body')
-const menuOff = document.querySelector('.menu-off')
-const menuOn = document.querySelector('.menu-on')
+const navBar = document.querySelector('#nav-bar')
 
-body.addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
     const targetClick = e.target
-    console.log(targetClick)
     if (targetClick.classList.contains('menu-btn')) {
-        menuOff.classList.toggle('hide')
-        menuOn.classList.toggle('hide')
+        navBar.classList.toggle('fade')
     }
 })

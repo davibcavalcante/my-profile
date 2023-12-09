@@ -1,0 +1,254 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-1: #003840;
+    --color-2: #005A5B;
+    --color-3: #007369;
+    --color-4: #008C72;
+    --color-5: #02A676;
+    --main-font: 'Poppins';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font), sans-serif;
+}
+
+.fade {
+    bottom: 0;
+    opacity: 1;
+}
+
+body {
+    background-image: linear-gradient(to bottom, var(--color-1), var(--color-5));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    color: #FAFAFA;
+    padding: 40px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.5em;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+nav {
+    width: fit-content;
+    position: absolute;
+    right: 20px;
+    right: 0;
+    bottom: 200%;
+    opacity: 0;
+    transform: translateY(calc(50% + 40px));
+    transition: .5s;
+}
+
+nav ul {
+    list-style-type: none;
+    background-image: linear-gradient(to bottom, #024344, #015B51);
+    padding: 10px 0;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    padding: 0 10px;
+    margin: 10px;
+}
+
+nav a {
+    color: #FAFAFA;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 90%;
+    align-self: center;
+}
+
+main ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+main li {
+    background-color: var(--color-3);
+    margin: 10px 0;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: .5s;
+    width: 100%;
+    max-width: 500px;
+    align-self: center;
+}
+
+main li:hover {
+    transform: scale(1.05);
+}
+
+main a {
+    color: #FAFAFA;
+    text-transform: capitalize;
+    text-align: center;
+    text-decoration: none;
+
+    padding: 20px 0;
+    display: block;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation img {
+    width: 80px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.navigation img:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        position: static;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header button {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+        opacity: 1;
+        position: static;
+        transform: translate(0);
+    }
+
+    nav ul {
+        background-image: none;
+        width: 100%;
+        max-width: 700px;
+        margin: auto;
+        border: none; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav li {
+        background-color: var(--color-5);
+        padding: 5px 15px;
+        border-radius: 20px;
+        border-top: 2px solid #FAFAFA;
+        border-bottom: 2px solid #FAFAFA;
+        transition: .5s;
+        cursor: pointer;
+    }
+
+    nav li:hover {
+        transform: scale(1.1);
+    }
+
+    nav li:active {
+        opacity: .9;
+    }
+
+    nav a:hover {
+        text-decoration: none;
+    }
+
+    main ul {
+        border: none;
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    main li {
+        background-color: var(--color-4);
+        border: none;
+        border-radius: 4px;
+        width: 30%;
+        height: 80px;
+        box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    main a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    header h1 {
+        font-weight: normal;
+    }
+
+    nav {
+        width: 60%;
+        max-width: 539px;
+    }
+
+    main {
+        max-width: 892.797px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    header h1::after {
+        content: ' | Frontend Developer Student';
+    }
+}
