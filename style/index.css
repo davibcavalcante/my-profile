@@ -20,15 +20,15 @@
     color: var(--highlight-color);
 }
 
-.desktop-social-container, .desktop-navigation {
-    display: none;
+body, html {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
 main {
@@ -215,14 +215,14 @@ main {
 }
 
 .nav-buttons-container a {
-    color: white;
-    background-color: transparent;
-    font: normal 1.2em var(--main-font);
+    color: var(--main-color);
+    background-color: white;
+    font: 500 1em var(--main-font);
 
-    border: 2px solid white;
+    border: 2px solid var(--main-color);
     border-radius: 10px;
 
-    width: 120px;
+    padding: 0 10px;
     min-height: 42.5px;
 
     display: flex;
