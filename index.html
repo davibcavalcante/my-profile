@@ -3,63 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/scrollbar.css">
-    <link rel="stylesheet" href="style/index.css">
+
+    <script src="https://kit.fontawesome.com/3954e72066.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/menu.css">
+    <link rel="stylesheet" href="./style/footer.css">
+
     <title>My Profile</title>
 </head>
 <body>
     <header>
-        <h1>Davi Cavalcante</h1>
-        <button class="menu-btn">
-            <img src="assets/menu.png" alt="Hamburguer Menu" class="menu-btn">
-        </button>
+        <section class="name-container">
+            <img src="assets/profile.png" alt="Foto de perfil de Davi Cavalcante">
+            <h1>Davi <span class="highlight">Cavalcante</span></h1>
+        </section>
 
-        <nav id="nav-bar">
+        <section class="menu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </section>
+
+        <nav class="desktop-navigation">
+            <ul>
+                <li><a href="./pages/indigital.html" rel="next" target="_self">Indigital</a></li>
+                <li><a href="./pages/about.html" rel="next" target="_self">Sobre mim</a></li>
+                <li><a href="./pages/github.html" rel="external" target="_blank">Github</a></li>
+                <li id="contact-btn"><p>Contato</p></li>
+            </ul>
+        </nav>
+
+        <section class="desktop-social-container">
             <ul>
                 <li>
-                    <a href="./pages/about-me.html" rel="next" target="_self">About me</a>
+                    <a href="https://www.instagram.com/indigitalprogramming/" rel="external" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
                 </li>
+
                 <li>
-                    <a href="./pages/projects.html" rel="next" target="_self">Projects</a>
+                    <a href="https://www.tiktok.com/@indigital5" rel="external" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
                 </li>
+
                 <li>
-                    <a href="https://github.com/davibcavalcante?tab=repositories" rel="external" target="_blank">Repositories</a>
+                    <a href="https://www.youtube.com/@indigitalprogramming" rel="external" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.github.com/davibcavalcante" rel="external" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
                 </li>
             </ul>
+        </section>
+
+        <nav class="mobile-navigation">
+            <ul>
+                <li>
+                    <a href="./pages/indigital.html" rel="next" target="_self" class="link-container">
+                        <section class="icon-container">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </section>
+                        <section class="text-container">
+                            <p>Indigital</p>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </section>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="./pages/about.html" rel="next" target="_self" class="link-container">
+                        <section class="icon-container">
+                            <i class="fa-regular fa-circle-user"></i>
+                        </section>
+                        <section class="text-container">
+                            <p>Sobre mim</p>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </section>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="https://www.github.com/davibcavalcante" rel="external" target="_blank" class="link-container">
+                        <section class="icon-container">
+                            <i class="fa-brands fa-github"></i>
+                        </section>
+                        <section class="text-container">
+                            <p>Github</p>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </section>
+                    </a>
+                </li>
+    
+                <li id="contact-btn">
+                    <a href="#" class="link-container">
+                        <section class="icon-container">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </section>
+                        <section class="text-container">
+                            <p>Contato</p>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </section>
+                    </a>
+                </li>
+            </ul>
+
+            <section class="navigation-footer">
+                <p>&copy; Developed by <a href="https://www.github.com/davibcavalcante" rel="external" target="_blank">Davi Cavalcante</a> by <a href="./pages/indigital.html" rel="next" target="_self">Indigital</a></p>
+            </section>
         </nav>
     </header>
 
     <main>
-        <picture>
-            <source media="(max-width: 599px)" srcset="assets/img-profile-small.png">
-            <source media="(max-width: 991px)" srcset="assets/img-profile.png">
-            <img src="assets/img-profile-big.jpg" alt="Profile Image of Davi Cavalcante">
-        </picture>
+        <section class="desktop-flex">
+            <section class="desktop-container">
+                <section class="introduction-container">
+                    <section class="greeting-container">
+                        <p>Olá, eu sou</p>
+                        <h1>Davi <br> Cavalcante</h1>
+                    </section>
+                    <section class="overview-container">
+                        <p>
+                            Desenvolvedor Web, Designer, estudante 2° período em Ciência da Computação e fundador da <span class="highlight">INDIGITAL</span>
+                        </p>
+                    </section>
+                    <section class="mobile-social-container">
+                        <ul>
+                            <li>
+                                <a href="https://www.instagram.com/indigitalprogramming/" rel="external" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@indigital5" rel="external" target="_blank">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@indigitalprogramming" rel="external" target="_blank">
+                                    <i class="fa-brands fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.github.com/davibcavalcante" rel="external" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
 
-        <section class="flex-container">
-            <section class="presentation">
-                <h1>Hi, I'm Davi</h1>
-                <p>Frontend Developer Student</p>
+                <section class="skills-container">
+                    <section class="skills-title">
+                        <h1>Principais Habilidades</h1>
+                    </section>
+                    <section class="dev-skills">
+                        <ul>
+                            <li>
+                                <img src="assets/logo-html.png" alt="Logo do HTML">
+                                <p>HTML</p>
+                            </li>
+                            <li>
+                                <img src="assets/logo-css.png" alt="Logo do CSS">
+                                <p>CSS</p>
+                            </li>
+                            <li>
+                                <img src="assets/logo-js.png" alt="Logo do JS">
+                                <p>JS</p>
+                            </li>
+                            <li>
+                                <img src="assets/logo-node.png" alt="Logo do Node">
+                                <p>Node</p>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="design-skills">
+                        <ul>
+                            <li>
+                                <img src="assets/logo-photoshop.png" alt="Logo do Photoshop">
+                                <p>PS</p>
+                            </li>
+                            <li>
+                                <img src="assets/logo-figma.png" alt="Logo do Figma" class="figma-img">
+                                <p>Figma</p>
+                            </li>
+                            <li>
+                                <img src="assets/logo-illustrator.png" alt="Logo do Illustrator">
+                                <p>AI</p>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
             </section>
-            <section class="social-medias">
-                <ul>
-                    <li>
-                        <a href="https://github.com/davibcavalcante" rel="external" target="_blank">
-                            <img src="assets/github.png" alt="Github Icon">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="./pages/projects.html" class="link-projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/davi-barbosa-cavalcante-b32a14201" rel="external" target="_blank">
-                            <img src="assets/linkedin.png" alt="Linkedin Icon">
-                        </a>
-                    </li>
-                </ul>
+
+            <section class="desktop-container">
+                <section class="projects-container">
+                    <section class="projects-title">
+                        <h1>Principais Projetos</h1>
+                    </section>
+                    <section class="project-area">
+                        <section class="overflow-container">
+                            <section class="projects">
+                                <iframe src="https://davibcavalcante.github.io/movie-app" frameborder="0"></iframe>
+                                <iframe src="https://davibcavalcante.github.io/smart-todo" frameborder="0"></iframe>
+                                <iframe src="https://davibcavalcante.github.io/weather-app" frameborder="0"></iframe>
+                            </section>
+                        </section>
+                        <section class="nav-buttons-container">
+                            <button id="prev-project-btn" class="left-btn">
+                                <i class="fa-solid fa-left-long"></i>
+                            </button>
+                            <a id="visit-project-btn">
+                                Visit <i class="fa-solid fa-share-from-square"></i>
+                            </a>
+                            <button id="next-project-btn" class="right-btn">
+                                <i class="fa-solid fa-right-long"></i>
+                            </button>
+                        </section>
+                    </section>
+                </section>
             </section>
-        </div>
+        </section>
     </main>
+
+    <footer>
+        <section class="logo-container">
+            <section class="dc-logo-container">
+                <h1>D<span class="highlight">C</span></h1>
+            </section>
+            <section class="indigital-logo-container">
+                <img src="assets/logo-indigital.png" alt="Logo da Indigital">
+            </section>
+        </section>
+
+        <section class="contact-container" id="contact-container">
+            <h1>Informações de contato:</h1>
+            <p>
+                EMAIL: indigitalprogcontato@gmail.com  <br>
+                TIKTOK: @indigital5 <br>
+                INSTAGRAM: @indigitalprogramming <br>
+                YOUTUBE: InDigital
+            </p>
+        </section>
+
+        <section class="all-reserved-container">
+            <p>&copy; Todos os direitos reservados </p>
+        </section>
+    </footer>
+
+    
     
     <script src="./js/index.js"></script>
 </body>

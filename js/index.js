@@ -1,8 +1,6 @@
-const navBar = document.querySelector('#nav-bar')
+const menu = document.querySelector('.menu')
+const mobileNav = document.querySelector('.mobile-navigation')
 
-document.addEventListener('click', (e) => {
-    const targetClick = e.target
-    if (targetClick.classList.contains('menu-btn')) {
-        navBar.classList.toggle('fade')
-    }
+menu.addEventListener('click', () => {
+    menu.classList.toggle('active')
 })
