@@ -1,4 +1,4 @@
-.desktop-footer-navigation-container, .desktop-footer-social-container {
+.desktop-footer-navigation-container, .desktop-footer-social-container, .quote-container {
     display: none;
 }
 
@@ -66,4 +66,145 @@ footer {
     color: white;
     font: normal .8em var(--main-font);
     text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+    .desktop-footer-navigation-container, .desktop-footer-social-container {
+        display: block;
+    }
+
+    .desktop-footer-container {
+        width: 100%;
+        padding: 15px 2%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-container {
+        width: 20%;
+        gap: 5px;
+    }
+
+    .dc-logo-container {
+        width: 40px;
+        height: 40px;
+    }
+
+    .dc-logo-container h1 {
+        font-size: 1.2em;
+    }
+
+    .indigital-logo-container img {
+        width: 135px;
+    }
+
+    .contact-container {
+        padding: 0;
+        border: none;
+        width: 30%;
+
+        align-self: flex-start;
+        align-items: start;
+    }
+
+    .contact-container h1 {
+        font-size: 1.2em;
+    }
+
+    .contact-container p {
+        font-size: .8em;
+        text-align: left;
+    }
+
+    .desktop-footer-navigation-container {
+        align-self: flex-start;
+        width: 20%;
+    }
+
+    .desktop-footer-navigation-container h1 {
+        color: white;
+        font: normal 1.2em var(--main-font);
+    }
+
+    .desktop-footer-navigation-container ul, .desktop-footer-social-container ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .desktop-footer-navigation-container a, .desktop-footer-social-container a {
+        color: white;
+        font: normal .9em var(--main-font);
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .desktop-footer-social-container {
+        align-self: flex-start;
+        width: 15%;
+    }
+
+    .desktop-footer-social-container h1 {
+        color: white;
+        font: normal 1.2em var(--main-font);
+        text-transform: uppercase;
+    }
+
+    .desktop-footer-social-container a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .desktop-footer-social-container i {
+        background-color: var(--secondary-color);
+        font-size: 1.2em;
+
+        border-radius: 50%;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+        width: 30px;
+        height: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quote-container {
+        color: white;
+        align-self: flex-start;
+        width: 15%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .icon-quote {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .quote, .mention {
+        font: normal .9em var(--main-font);
+        text-align: center;
+    }
+
+    .mention {
+        font-size: .8em;
+        color: var(--dull-color);
+    }
+
+    .all-reserved-container {
+        background-color: black;
+        padding: 5px 0;
+    }
+
+    .all-reserved-container p {
+        font-size: .9em;
+    }
 }

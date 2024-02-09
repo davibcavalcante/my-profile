@@ -34,7 +34,7 @@
                 <li><a href="./pages/indigital.html" rel="next" target="_self">Indigital</a></li>
                 <li><a href="./pages/about.html" rel="next" target="_self">Sobre mim</a></li>
                 <li><a href="./pages/github.html" rel="external" target="_blank">Github</a></li>
-                <li id="contact-btn"><p>Contato</p></li>
+                <li id="contact-btn"> <a href="#"> <p>Contato</p> </a> </li>
             </ul>
         </nav>
 
@@ -133,7 +133,7 @@
                     </section>
                     <section class="overview-container">
                         <p>
-                            Desenvolvedor Web, Designer, estudante 2° período em Ciência da Computação e fundador da <span class="highlight">INDIGITAL</span>
+                            Desenvolvedor Web, Designer, estudante 2° período em Ciência da Computação e fundador da  <a href="./pages/indigital.html" rel="next" target="_self">INDIGITAL ></a>
                         </p>
                     </section>
                     <section class="mobile-social-container">
@@ -213,16 +213,19 @@
                     <section class="project-area">
                         <section class="overflow-container">
                             <section class="projects">
-                                <iframe src="https://davibcavalcante.github.io/movie-app" frameborder="0"></iframe>
-                                <iframe src="https://davibcavalcante.github.io/smart-todo" frameborder="0"></iframe>
-                                <iframe src="https://davibcavalcante.github.io/weather-app" frameborder="0"></iframe>
+                                <iframe src="https://davibcavalcante.github.io/movie-app" 
+                               class="movie-app" frameborder="0" target="mockup"></iframe>
+                                <iframe src="https://davibcavalcante.github.io/smart-todo" 
+                               class="smart-todo" frameborder="0" target="mockup"></iframe>
+                                <iframe src="https://davibcavalcante.github.io/weather-app" 
+                               class="weather-app" frameborder="0" target="mockup"></iframe>
                             </section>
                         </section>
                         <section class="nav-buttons-container">
                             <button id="prev-project-btn" class="left-btn">
                                 <i class="fa-solid fa-left-long"></i>
                             </button>
-                            <a id="visit-project-btn">
+                            <a href="#" id="visit-project-btn">
                                 Ver Projeto <i class="fa-solid fa-share-from-square"></i>
                             </a>
                             <button id="next-project-btn" class="right-btn">
@@ -236,65 +239,67 @@
     </main>
 
     <footer>
-        <section class="logo-container">
-            <section class="dc-logo-container">
-                <h1>D<span class="highlight">C</span></h1>
+        <section class="desktop-footer-container">
+            <section class="logo-container">
+                <section class="dc-logo-container">
+                    <h1>D<span class="highlight">C</span></h1>
+                </section>
+                <section class="indigital-logo-container">
+                    <img src="assets/logo-indigital.png" alt="Logo da Indigital">
+                </section>
             </section>
-            <section class="indigital-logo-container">
-                <img src="assets/logo-indigital.png" alt="Logo da Indigital">
+            <section class="contact-container" id="contact-container">
+                <h1>Informações de contato:</h1>
+                <p>
+                    EMAIL: indigitalprogcontato@gmail.com  <br>
+                    TIKTOK: @indigital5 <br>
+                    INSTAGRAM: @indigitalprogramming <br>
+                    YOUTUBE: InDigital
+                </p>
             </section>
-        </section>
-
-        <section class="contact-container" id="contact-container">
-            <h1>Informações de contato:</h1>
-            <p>
-                EMAIL: indigitalprogcontato@gmail.com  <br>
-                TIKTOK: @indigital5 <br>
-                INSTAGRAM: @indigitalprogramming <br>
-                YOUTUBE: InDigital
-            </p>
-        </section>
-
-        <section class="desktop-footer-navigation-container">
-            <h1>OUTROS ACESSOS:</h1>
-            <ul>
-                <li><a href="./pages/indigital.html" rel="next" target="_self">Indigital</a></li>
-                <li><a href="./pages/about.html" rel="next" target="_self">Sobre mim</a></li>
-                <li><a href="./pages/github.html" rel="external" target="_blank">Github</a></li>
-                <li id="contact-btn"><p>Contato</p></li>
-            </ul>
-        </section>
-
-        <section class="desktop-footer-social-container">
-            <ul>
-                <li>
-                    <a href="https://www.instagram.com/indigitalprogramming/" rel="external" target="_blank">
-                        <i class="fa-brands fa-instagram"></i> Instagram
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.tiktok.com/@indigital5" rel="external" target="_blank">
-                        <i class="fa-brands fa-tiktok"></i> Tiktok
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.youtube.com/@indigitalprogramming" rel="external" target="_blank">
-                        <i class="fa-brands fa-youtube"></i> Youtube
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.github.com/davibcavalcante" rel="external" target="_blank">
-                        <i class="fa-brands fa-github"></i> Github
-                    </a>
-                </li>
-            </ul>
+            <section class="desktop-footer-navigation-container">
+                <h1>OUTROS ACESSOS:</h1>
+                <ul>
+                    <li><a href="./pages/indigital.html" rel="next" target="_self">Indigital</a></li>
+                    <li><a href="./pages/about.html" rel="next" target="_self">Sobre mim</a></li>
+                    <li><a href="./pages/github.html" rel="external" target="_blank">Github</a></li>
+                    <li id="contact-btn"> <a href=""> <p>Contato</p> </a> </li>
+                </ul>
+            </section>
+            <section class="desktop-footer-social-container">
+                <h1>Redes Sociais:</h1>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/indigitalprogramming/" rel="external" target="_blank">
+                            <i class="fa-brands fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@indigital5" rel="external" target="_blank">
+                            <i class="fa-brands fa-tiktok"></i> Tiktok
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@indigitalprogramming" rel="external" target="_blank">
+                            <i class="fa-brands fa-youtube"></i> Youtube
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.github.com/davibcavalcante" rel="external" target="_blank">
+                            <i class="fa-brands fa-github"></i> Github
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section class="quote-container">
+                <p class="icon-quote"><i class="fa-solid fa-quote-left"></i></p>
+                <p class="quote">A tecnologia é apenas uma parte da solução. As pessoas são a chave.</p>
+                <p class="mention">Satya Nadella</p>
+            </section>
         </section>
 
         <section class="all-reserved-container">
-            <p>&copy; Todos os direitos reservados </p>
+            <p>&copy; 2024 Todos os direitos reservados </p>
         </section>
     </footer>
 
