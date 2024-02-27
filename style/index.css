@@ -171,38 +171,47 @@ main {
 }
 
 .projects-container {
-    background-color: var(--secondary-color);
-    padding-top: 15px;
-    padding-bottom: 20px;
+    background-color: var(--main-color);
 }
 
-.project-area {
-    width: 100%;
+.phone-container {
+    background: url(../assets/frame-iphone.png) no-repeat center center;
+    background-size: 100%;
+
+    margin: auto;
+    width: 355px;
+    height: 700px;
+
     position: relative;
 }
 
 .overflow-container {
-    width: 90%;
-    height: auto;
-    margin: auto;
     overflow: hidden;
+
+    width: calc(100% - 30px);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + 1px), calc(-50% + 2px));
 }
 
 .projects {
+    width: 100%;
     display: flex;
-    margin-bottom: 15px;
+
     transition: .5s;
 }
 
 .projects iframe {
     min-width: 100%;
-    height: 600px;
-    border: 2px solid white;
-    border-radius: 10px;
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+    height: 540px;
 }
 
 .nav-buttons-container {
+    background-color: var(--secondary-color);
+    padding: 15px;
+    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -294,14 +303,6 @@ main {
     .dev-skills, .design-skills {
         width: 100%;
         max-width: none;
-    }
-
-    .overflow-container {
-        max-width: 400px;
-    }
-
-    .projects iframe {
-        height: 550px;
     }
 
     .nav-buttons-container {
