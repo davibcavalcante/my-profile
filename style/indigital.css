@@ -1,0 +1,181 @@
+:root {
+    --main-font: 'Poppins', sans-serif;
+    --main-color: #032940;
+    --main-color-fade: #032940de;
+    --background-color: #00111b;
+    --secondary-color: #083359;
+    --highlight-color: #13C9F2;
+    --dull-color: #D0D0D0; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+.highlight {
+    color: var(--highlight-color);
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin: auto;
+    max-width: 600px;
+    flex: 1;
+}
+
+.title-container {
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 20px 30px;
+}
+
+.title-container h1 {
+    font: 600 3em var(--main-font);
+    text-transform: uppercase;
+    line-height: 1em;
+
+    position: relative;
+}
+
+.title-container h1::before {
+    content: '';
+
+    background-color: white;
+    width: 15px;
+    height: 4px;
+
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.text-container, .text-overflow-container {
+    color: white;
+    font: normal 1em var(--main-font);
+    line-height: 1.7em;
+    padding: 15px 10px;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    position: relative;
+}
+
+.text-container p {
+    position: relative;
+    z-index: 1;
+}
+
+.text-container::before {
+    content: '';
+
+    background-color: var(--main-color-fade);
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.text-container.play {
+    background-image: url(../assets/chess.jpg);
+}
+
+.text-container.offer {
+    background-image: url(../assets/building.jpg);
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        margin: 0;
+        max-width: none;
+    }
+
+    .initial-play-container, .indigital-offer-container {
+        display: flex;
+    }
+
+    .indigital-offer-container {
+        height: auto;
+        max-height: 600px;
+    }
+
+    .title-container {
+        width: 40%;
+        padding: 40px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-container h1 {
+        font-size: 4.5em;
+    }
+
+    .text-container {
+        width: 60%;
+        font-size: 1.5em;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-container.play p {
+        max-width: 80%;
+    }
+
+    .text-container.offer p {
+        max-width: 90%;
+    }
+
+    .title-container.offer {
+        height: auto;
+        order: 2;
+    }
+
+    .text-container.offer {
+        height: auto;
+        order: 1;
+    }
+
+    .text-overflow-container {
+        overflow-y: auto;
+    }
+
+    .text-overflow-container::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .text-overflow-container::-webkit-scrollbar-track {
+        background-color: var(--background-color);
+        border-radius: 20px;
+    }
+
+    .text-overflow-container::-webkit-scrollbar-thumb {
+        background-color: white;
+        border-radius: 20px;
+    }
+}

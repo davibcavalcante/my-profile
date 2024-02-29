@@ -1,0 +1,167 @@
+:root {
+    --main-font: 'Poppins', sans-serif;
+    --main-color: #032940;
+    --main-color-fade: #032940de;
+    --main-color-low-fade: #03294098;
+    --background-color: #00111b;
+    --secondary-color: #083359;
+    --highlight-color: #13C9F2;
+    --dull-color: #D0D0D0; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+.highlight {
+    color: var(--highlight-color);
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin: auto;
+    max-width: 600px;
+    flex: 1;
+}
+
+.about-container {
+    background: url(../assets/light.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.low-fade {
+    color: white;
+    background-color: var(--main-color-low-fade);
+    font-family: var(--main-font);
+    text-align: center;
+    min-height: 150px;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.low-fade h1 {
+    font-size: 3.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1em;
+}
+
+.low-fade h2 {
+    color: var(--dull-color);
+    font-size: 1.5em;
+    font-weight: normal;
+}
+
+.high-fade {
+    color: white;
+    background-color: var(--main-color-fade);
+    height: auto;
+    padding: 10px;
+}
+
+.high-fade p {
+    font: normal 1em var(--main-font);
+}
+
+.title-container {
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 10px 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.title-container h1 {
+    font: 600 2em var(--main-font);
+    text-transform: uppercase;
+    line-height: 1em;
+
+    position: relative;
+}
+
+.title-container h1::before {
+    content: '';
+
+    background-color: white;
+    width: 15px;
+    height: 4px;
+
+    position: absolute;
+    top: -2px;
+    left: -15px;
+}
+
+.text-container {
+    background-color: var(--main-color);
+    color: white;
+    font: normal 1em var(--main-font);
+    line-height: 1.7em;
+    padding: 15px 10px;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    position: relative;
+}
+
+.text-container p {
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background: url(../assets/about-bg.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    main {
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        max-width: 800px;
+    }
+
+    .low-fade {
+        min-height: 200px;
+    }
+
+    .high-fade {
+        padding: 15px 10px;
+    }
+
+    .high-fade p {
+        font-size: 1.2em;
+    }
+}

@@ -19,13 +19,17 @@ header {
 .name-container {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 15px;
 }
 
-.name-container img {
+.name-container #profile-img {
     width: 35px;
     border: 2px solid white;
     border-radius: 50%;
+}
+
+.name-container #indigital-logo {
+    width: 135px;
 }
 
 .name-container h1 {

@@ -8,6 +8,7 @@
     left: 100%;
 
     transition: .5s;
+    z-index: 10;
 }
 
 .menu.active ~ .mobile-navigation {
@@ -47,7 +48,7 @@
     z-index: 2;
 }
 
-.text-container {
+.text-menu-container {
     color: var(--main-color);
     background-image: linear-gradient(to right, var(--secondary-color), var(--highlight-color));
     
@@ -66,7 +67,7 @@
     z-index: 1;
 }
 
-.text-container p {
+.text-menu-container p {
     font: normal 1em var(--main-font);
     color: white;
     text-transform: uppercase;

@@ -1,51 +1,85 @@
-const menu = document.querySelector('.menu')
-const mobileNav = document.querySelector('.mobile-navigation')
-
-menu.addEventListener('click', () => {
-    menu.classList.toggle('active')
-})
-
-const nextProjectButton = document.querySelector('#next-project-btn')
-const prevProjectButton = document.querySelector('#prev-project-btn')
-const projectsContainer = document.querySelector('.projects')
-const projects = projectsContainer.querySelectorAll('iframe')
-
-const projectsLength = projects.length
-
-let currentProject = 1
-
-nextProjectButton.addEventListener('click', nextProject)
-prevProjectButton.addEventListener('click', prevProject)
-
-function nextProject() {
-    if (currentProject < projectsLength) {
-        projectsContainer.style.transform = `translateX(-${100 * currentProject}%)`
-        currentProject++
-        getNameProject()
-    }
-}
-
-function prevProject() {
-    if (currentProject > 1) {
-        currentProject--
-        projectsContainer.style.transform = `translateX(-${100 * (currentProject - 1)}%)`
-        getNameProject()
-    }
-}
-
-function setLink(name) {
+const setLink = (name) => {
     const link = document.querySelector('#visit-project-btn')
-    link.href = `https://davibcavalcante.github.io/${name}/`
+
+    if (name === 'jubao') {
+        link.href = `http://jubaofe.com.br`
+    } else {
+        link.href = `https://davibcavalcante.github.io/${name}/`
+    }
     link.rel = 'external'
     link.target = '_blank'
 }
 
-function getNameProject() {
-    const index = currentProject - 1
-    const project = projects[index]
-    const nameProject = project.classList[0]
+const getNameProject = (project) => {
+    const nameProject = project.id
 
     setLink(nameProject)
 }
 
-getNameProject()
+const moveProject = (container, projectsLength, currentProject, action) => {
+    let numCurrent = Number(currentProject.classList[0].substring(7))
+
+    if (action === 'next' && (numCurrent < projectsLength)) {
+        container.style.transform = `translateX(-${100 * numCurrent}%)`
+        return true
+    } else if (action === 'prev' && (numCurrent > 1)) {
+        numCurrent--
+        container.style.transform = `translateX(-${100 * (numCurrent - 1)}%)`
+        return true
+    }
+
+    return false
+}
+
+const getCurrentProject = () => {
+    const projectsContainer = document.querySelector('.projects')
+    const projectsLength = projectsContainer.querySelectorAll('iframe').length
+    const currentProject = projectsContainer.querySelector('.selected')
+
+    return { projectsContainer, projectsLength, currentProject }
+}
+
+const getDataMove = (action) => {
+    const projectsData = getCurrentProject()
+
+    const container = projectsData.projectsContainer
+    const projectsLength = projectsData.projectsLength
+    const currentProject = projectsData.currentProject
+
+    const result = moveProject(container, projectsLength, currentProject, action)
+
+    if (result) {
+        const classCurrentProject = currentProject.classList[0]
+        let newCurrent
+        if (action === 'next') {
+            newCurrent = parseInt(classCurrentProject.substring(7)) + 1
+        } else {
+            newCurrent = parseInt(classCurrentProject.substring(7)) - 1
+        }
+        
+        const newSelectProject = container.querySelector(`.project${newCurrent}`)
+        currentProject.classList.remove('selected')
+        newSelectProject.classList.add('selected')
+
+        getNameProject(newSelectProject)
+    }
+}
+
+const setProjectsEvents = () => {
+    const nextProjectButton = document.querySelector('#next-project-btn')
+    const prevProjectButton = document.querySelector('#prev-project-btn')
+
+    nextProjectButton.addEventListener('click', () => {
+        getDataMove('next')
+    })
+    prevProjectButton.addEventListener('click', () => {
+        getDataMove('prev')
+    })
+
+    const defaultProject = document.querySelector('.selected')
+    getNameProject(defaultProject)
+}
+
+window.addEventListener('load', () => {
+    setProjectsEvents()
+})

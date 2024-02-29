@@ -1,5 +1,13 @@
+:root {
+    --alert-color: #fbff01;
+}
+
 .desktop-footer-navigation-container, .desktop-footer-social-container, .quote-container {
     display: none;
+}
+
+.alert {
+    color: var(--alert-color);
 }
 
 footer {

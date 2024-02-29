@@ -19,7 +19,7 @@
 <body>
     <header>
         <section class="name-container">
-            <img src="assets/profile.png" alt="Foto de perfil de Davi Cavalcante">
+            <img src="assets/profile.png" alt="Foto de perfil de Davi Cavalcante" id="profile-img">
             <h1>Davi <span class="highlight">Cavalcante</span></h1>
         </section>
 
@@ -32,8 +32,8 @@
         <nav class="desktop-navigation">
             <ul>
                 <li><a href="./pages/indigital.html" rel="next" target="_self">Indigital</a></li>
-                <li><a href="./pages/about.html" rel="next" target="_self">Sobre mim</a></li>
-                <li><a href="./pages/github.html" rel="external" target="_blank">Github</a></li>
+                <li><a href="./pages/sobre-mim.html" rel="next" target="_self">Sobre mim</a></li>
+                <li><a href="https://github.com/davibcavalcante" rel="external" target="_blank">Github</a></li>
                 <li id="contact-btn"> <a href="#"> <p>Contato</p> </a> </li>
             </ul>
         </nav>
@@ -73,7 +73,7 @@
                         <section class="icon-container">
                             <i class="fa-solid fa-network-wired"></i>
                         </section>
-                        <section class="text-container">
+                        <section class="text-menu-container">
                             <p>Indigital</p>
                             <i class="fa-solid fa-angle-right"></i>
                         </section>
@@ -81,11 +81,11 @@
                 </li>
     
                 <li>
-                    <a href="./pages/about.html" rel="next" target="_self" class="link-container">
+                    <a href="./pages/sobre-mim.html" rel="next" target="_self" class="link-container">
                         <section class="icon-container">
                             <i class="fa-regular fa-circle-user"></i>
                         </section>
-                        <section class="text-container">
+                        <section class="text-menu-container">
                             <p>Sobre mim</p>
                             <i class="fa-solid fa-angle-right"></i>
                         </section>
@@ -97,7 +97,7 @@
                         <section class="icon-container">
                             <i class="fa-brands fa-github"></i>
                         </section>
-                        <section class="text-container">
+                        <section class="text-menu-container">
                             <p>Github</p>
                             <i class="fa-solid fa-angle-right"></i>
                         </section>
@@ -109,7 +109,7 @@
                         <section class="icon-container">
                             <i class="fa-solid fa-mobile-screen"></i>
                         </section>
-                        <section class="text-container">
+                        <section class="text-menu-container">
                             <p>Contato</p>
                             <i class="fa-solid fa-angle-right"></i>
                         </section>
@@ -133,7 +133,7 @@
                     </section>
                     <section class="overview-container">
                         <p>
-                            Desenvolvedor Web, Designer, estudante 2° período em Ciência da Computação e fundador da  <a href="./pages/indigital.html" rel="next" target="_self">INDIGITAL ></a>
+                            Desenvolvedor Web, Designer, Estudante 2° período em Ciência da Computação e fundador da  <a href="./pages/indigital.html" rel="next" target="_self">INDIGITAL ></a>
                         </p>
                     </section>
                     <section class="mobile-social-container">
@@ -215,13 +215,17 @@
                             <section class="overflow-container">
                                 <section class="projects">
 
-                                    <iframe src="http://jubaofe.com.br" class="jubao-fe" frameborder="0" target="mockup"></iframe>
+                                    <iframe src="http://jubaofe.com.br" id="jubao" class="project1 selected" frameborder="0" target="mockup"></iframe>
 
-                                    <iframe src="https://davibcavalcante.github.io/movie-app" class="movie-app" frameborder="0" target="mockup"></iframe>
+                                    <iframe src="https://davibcavalcante.github.io/movie-app" id="movie-app" class="project2" frameborder="0" target="mockup"></iframe>
     
-                                    <iframe src="https://davibcavalcante.github.io/smart-todo" class="smart-todo" frameborder="0" target="mockup"></iframe>
+                                    <iframe src="https://davibcavalcante.github.io/smart-todo" id="smart-todo" class="project3" frameborder="0" target="mockup"></iframe>
     
-                                    <iframe src="https://davibcavalcante.github.io/weather-app" class="weather-app" frameborder="0" target="mockup"></iframe>
+                                    <iframe src="https://davibcavalcante.github.io/weather-app" id="weather-app" class="project4" frameborder="0" target="mockup"></iframe>
+
+                                    <iframe src="https://davibcavalcante.github.io/translator" id="translator" class="project5" frameborder="0" target="mockup"></iframe>
+
+                                    <iframe src="https://davibcavalcante.github.io/xo-game" id="xo-game" class="project6" frameborder="0" target="mockup"></iframe>
     
                                 </section>
                             </section>
@@ -266,7 +270,7 @@
                 <h1>OUTROS ACESSOS:</h1>
                 <ul>
                     <li><a href="./pages/indigital.html" rel="next" target="_self">Indigital</a></li>
-                    <li><a href="./pages/about.html" rel="next" target="_self">Sobre mim</a></li>
+                    <li><a href="./pages/sobre-mim.html" rel="next" target="_self">Sobre mim</a></li>
                     <li><a href="./pages/github.html" rel="external" target="_blank">Github</a></li>
                     <li id="contact-btn"> <a href=""> <p>Contato</p> </a> </li>
                 </ul>
@@ -311,5 +315,7 @@
     
     
     <script src="./js/index.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/contato.js"></script>
 </body>
 </html>
