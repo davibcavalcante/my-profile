@@ -22,6 +22,10 @@ header {
     gap: 15px;
 }
 
+.name-container a {
+    text-decoration: none;
+}
+
 .name-container #profile-img {
     width: 35px;
     border: 2px solid white;

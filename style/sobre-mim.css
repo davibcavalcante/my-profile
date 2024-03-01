@@ -136,6 +136,10 @@ main {
     z-index: 1;
 }
 
+.text-container a {
+    text-decoration: none;
+}
+
 @media screen and (min-width: 600px) {
     body {
         background: url(../assets/about-bg.jpg) no-repeat center center fixed;
