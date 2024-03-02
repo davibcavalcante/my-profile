@@ -1,5 +1,5 @@
-const menu = document.querySelector('.menu')
+const menu = document.querySelector('.menu');
 
 menu.addEventListener('click', () => {
-    menu.classList.toggle('active')
-})
+    menu.classList.toggle('active');
+});
