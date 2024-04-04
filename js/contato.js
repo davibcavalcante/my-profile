@@ -12,6 +12,7 @@ const scrollToContact = () => {
 
 window.addEventListener('load', () => {
     const contactButtons = document.querySelectorAll('.contact-btn');
+    console.log(contactButtons)
     contactButtons.forEach((button) => {
         button.addEventListener('click', scrollToContact);
     });
